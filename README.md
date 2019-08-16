@@ -18,7 +18,16 @@
 >
 >> [1_fixed-size_data](/1_fixed-size_data)
 
-##### 2.2 Note file name is named by rule
+##### 2.2 Images used and named rule:
+> Rule:
+>> Image path is in sub-volume of per part root path named images.
+>> Image named is by the raw name of the document of [HTDP-2e]((https://htdp.org/2019-02-24/)).
+>
+> Example:
+>
+>> [rocket.png](/1_fixed-size_data/images/rocket.png)
+
+##### 2.3 Note file name is named by rule
 > Rule:
 >> `[example|others] + chapter index + _ + section index [+ _ + example index] [ + -SP ] + - + content summury + .rkt`
 >
@@ -28,7 +37,7 @@
 >>
 >> [example-02_03_02-SP-movie_profit.rkt](/1_fixed-size_data/example-02_03_02-SP-movie_profit.rkt)
 
-##### 2.3 Solution file name is named by rule
+##### 2.4 Solution file name is named by rule
 > Rule:
 >> `exercise index + _ + chapter index + -exercise- + content summury + .rkt`
 >
