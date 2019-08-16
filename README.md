@@ -21,6 +21,7 @@
 ##### 2.2 Images used and named rule:
 > Rule:
 >> Image path is in sub-volume of per part root path named images.
+>>
 >> Image named is by the raw name of the document of [HTDP-2e]((https://htdp.org/2019-02-24/)).
 >
 > Example:
