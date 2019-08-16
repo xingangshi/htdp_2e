@@ -18,11 +18,13 @@
 
 ##### 2.2 Note file name is named by rule
 > Rule:
->>    `chapter index + _ + section index + - + [example|others] + - + content summury + .rkt`
+>> `[example|others] + chapter index + _ + section index [+ _ + example index] [ + -SP ] + - + content summury + .rkt`
 >
 > Example:
 >
->> [01_04-example-image_package.rkt](/1_fixed-size_data/01_04-example-image_package.rkt)
+>> [example-01_04-image_package.rkt](/1_fixed-size_data/example-01_04-image_package.rkt)
+>>
+>> [example-02_03_02-SP-movie_profit.rkt](/1_fixed-size_data/example-02_03_02-SP-movie_profit.rkt)
 
 ##### 2.3 Solution file name is named by rule
 > Rule:
