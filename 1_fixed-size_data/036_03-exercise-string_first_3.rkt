@@ -5,13 +5,13 @@
 ;   Design the function string-first, which extracts the first character from a
 ;   non-empty string. Don’t worry about empty strings.
 
-; Name : string_first
+; Name     : string_first
 
-; Func : String -> String, returns the first character from a non-empty string.
+; Func     : String -> String, returns the first character from a non-empty string.
 ;
-; given : "hello"
+; Given    : "hello"
 ;
-; expected : 'h'
+; Expected : 'h'
 ; 
 (define (string_first in_str)
   (cond
