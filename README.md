@@ -8,6 +8,8 @@
 > [HTDP-2e Online-verison](https://htdp.org/2019-02-24/)
 >
 > [HTDP-2e Racket-packages](https://docs.racket-lang.org/teachpack/2htdp2htdp.html)
+>
+> [Racket - Specified editor](https://www.racket-lang.org/)
 
 #### 2. Some rules about my owner htdp_2e
 ##### 2.1 Root path rule
