@@ -4,7 +4,7 @@
 ; Exercise 61:
 ;
 ;   Finish the design of a world program that simulates the traffic light FSA.
-
+ 
 (require 2htdp/image)
 (require 2htdp/universe)
 

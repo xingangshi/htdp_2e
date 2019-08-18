@@ -8,7 +8,7 @@
 ;     An N-TrafficLight is one of:
 ;     – 0 interpretation the traffic light shows red
 ;     – 1 interpretation the traffic light shows green
-;     – 2 interpretation the traffic light shows yellow
+;     – 2 interpretation the traffic light shows yellow 
 
 
 (require 2htdp/image)
