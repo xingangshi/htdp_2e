@@ -57,3 +57,6 @@
 > Example:
 >
 >> [sample.dat](/1_fixed-size_data/temp_files/sample.dat)
+
+##### Note
+> BSL -- Beginning Student Language.
