@@ -1,0 +1,88 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname 160_09-exercise-posn_balloons_v2) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+; Exercise 160:
+;
+;   Turn the exercise of exercise 154 into a world program. Its main function, dubbed riot, consumes how many balloons
+;   the students want to throw; its visualization shows one balloon dropping after another at a rate of one per second.
+;   The function produces the list of Posns where the balloons hit.
+;
+;   Hints
+;   (1) Here is one possible data representation:
+;
+;     (define-struct pair [balloon# lob])
+;     ; A Pair is a structure (make-pair N List-of-posns)
+;     ; A List-of-posns is one of: 
+;     ; – '()
+;     ; – (cons Posn List-of-posns)
+;
+;   interpretation (make-pair n lob) means n balloons 
+;   must yet be thrown and added to lob
+;
+;   (2) A big-bang expression is really just an expression. It is legitimate to nest it within another expression.
+;   (3) Recall that random creates random numbers. 
+
+(require 2htdp/image)
+
+(define (col n img)
+  (cond
+    [(zero? n) (empty-scene 0 0)]
+    [(positive? n) (above img (col (sub1 n) img))]))
+
+(define (row n img)
+  (cond
+    [(zero? n) (empty-scene 0 0)]
+    [(positive? n) (beside img (row (sub1 n) img))]))
+
+(define (grid c r)
+  (cond
+    [(zero? r) (empty-scene 0 0)]
+    [(positive? r)
+     (above (row c (square 10 "outline" "black"))
+            (grid c (sub1 r) ))]))
+
+(define bg (grid 15 20))
+
+bg
+
+(define (add_balloons posn_list)
+  (cond
+    [(empty? (rest posn_list)) (place-image/align
+                                              (circle 5 "solid" "red")
+                                              (* (posn-x (first posn_list)) 10)
+                                              (* (posn-y (first posn_list)) 10)
+                                               "center" "center"
+                                              bg)]
+    [else (place-image/align
+             (circle 5 "solid" "red")
+             (* (posn-x (first posn_list)) 10)
+             (* (posn-y (first posn_list)) 10)
+              "center" "center"
+             (add_balloons (rest posn_list)))
+          ]))
+                                               
+
+; Test
+(check-expect (col 3 (square 10 "outline" "black"))
+              (above (square 10 "outline" "black")
+                     (square 10 "outline" "black")
+                     (square 10 "outline" "black")))
+
+(check-expect (row 3 (square 10 "outline" "black"))
+              (beside (square 10 "outline" "black")
+                      (square 10 "outline" "black")
+                      (square 10 "outline" "black")))
+
+(add_balloons (cons (make-posn 0 0) '()))
+(add_balloons (cons (make-posn 3 3) (cons (make-posn 9 3) '())))
+
+(add_balloons (cons (make-posn 0 0)
+                    (cons (make-posn 1 2)
+                          (cons (make-posn 2 4)
+                                (cons (make-posn 3 6)
+                                      (cons (make-posn 4 8)
+                                             (cons (make-posn 5 10)
+                                                    (cons (make-posn 6 12)
+                                                       
+                                      '()))))))))
+
