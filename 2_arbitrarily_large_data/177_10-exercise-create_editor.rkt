@@ -11,7 +11,7 @@
 
 (define-struct editor [pre post])
 
-(define (create_editor s1 s2)
+(define (create_editor s1 s2) 
   (make-editor (reverse (explode s1)) (explode s2)))
 
 ; Test

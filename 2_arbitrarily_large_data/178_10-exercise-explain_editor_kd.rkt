@@ -10,7 +10,7 @@
     [(key=? k "left") ...]
     [(key=? k "right") ...]
     [(key=? k "\b") ...]
-    [(key=? k "\t") ...]
+    [(key=? k "\t") ...] 
     [(key=? k "\r") ...]
     [(= (string-length k) 1) ...]
     [else ...]))

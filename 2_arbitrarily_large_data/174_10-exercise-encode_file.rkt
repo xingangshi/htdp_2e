@@ -9,7 +9,7 @@
 ;  Before you start, explain this function. Also recall how a string can be converted into a list of 1Strings.
 ;  Again, use read-words/line to preserve the organization of the file into lines and words.
 ;
-
+ 
 ; 1String -> String
 ; converts the given 1string into a three-letter numeric string
 

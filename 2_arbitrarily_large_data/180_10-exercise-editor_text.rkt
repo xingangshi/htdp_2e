@@ -6,7 +6,7 @@
 ;  Design editor-text without using implode. 
 ;
 
-(require 2htdp/image)
+(require 2htdp/image) 
 
 (define FONT-SIZE  16)       ; the font size 
 (define FONT-COLOR "black") ; the font color

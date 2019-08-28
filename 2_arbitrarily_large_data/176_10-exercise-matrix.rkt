@@ -8,7 +8,7 @@
 ;   transpose works. You should also understand that you cannot design this function with the design recipes you have seen so far. Explain why.
 ;   Design the two “wish list” functions. Then complete the design of the transpose with some test cases.
 
-(require 2htdp/batch-io)
+(require 2htdp/batch-io) 
 
 ; A Matrix is one of:
 ; – (cons Row '())

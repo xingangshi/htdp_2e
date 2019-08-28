@@ -5,7 +5,7 @@
 ;
 ;  Design the functions
 ;
-;   ; Editor -> Editor
+;   ; Editor -> Editor 
 ;   ; moves the cursor position one 1String left, if possible
 ;   (define (editor-lft ed)
 ;      ed)

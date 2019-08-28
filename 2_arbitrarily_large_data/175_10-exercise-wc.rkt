@@ -7,7 +7,7 @@
 ;  to count the number of 1Strings, words, and lines in a given file. That is, the command
 ;  consumes the name of a file and produces a value that consists of three numbers. 
 
-(require 2htdp/batch-io)
+(require 2htdp/batch-io) 
 
 (define-struct summary [chars words lines])
 ; A Summary is a structure: (make-structure Number Number Number)
